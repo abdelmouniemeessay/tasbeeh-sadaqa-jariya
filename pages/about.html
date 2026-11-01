@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>المنهجية والمصادر — تسبيح صدقة جارية</title>
+  <meta name="description" content="منهجية الموقع في نقل القرآن والأحاديث والأدعية، ومصادره، وخصوصيته، وتراخيص الخطوط والأدوات.">
+  <meta name="theme-color" content="#0b3b2e">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="المنهجية والمصادر — تسبيح صدقة جارية">
+  <meta property="og:description" content="منهجية الموقع في نقل القرآن والأحاديث والأدعية، ومصادره، وخصوصيته، وتراخيص الخطوط والأدوات.">
+  <meta property="og:image" content="../assets/images/og-cover.png">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="preload" href="../assets/fonts/amiri-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/ibm-plex-sans-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("tasbeeh.theme.v1");
+        if (!theme) theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body data-root="../" data-page="about" data-page-path="pages/about.html">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="تسبيح — الصفحة الرئيسية">
+        <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-star"></use></svg></span>
+        <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="التنقل الرئيسي">
+        <a href="../index.html" data-nav="home">الرئيسية</a>
+        <a href="../pages/duas.html" data-nav="duas">الأدعية</a>
+        <a href="../pages/quran.html" data-nav="quran">القرآن الكريم</a>
+        <a href="../pages/tasbeeh.html" data-nav="tasbeeh">المسبحة</a>
+        <a href="../pages/adhkar.html" data-nav="adhkar">أذكار الصباح والمساء</a>
+        <a href="../pages/charity.html" data-nav="charity">باب الخير</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="تبديل الوضع">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-moon"></use></svg>
+        </button>
+        <button class="btn btn--outline btn--sm header__dedicate" type="button" data-open-personalize aria-label="إهداء العمل صدقة جارية">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-heart"></use></svg>
+          <span class="btn__label">إهداء</span>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumbs" aria-label="مسار التصفح">
+          <a href="../index.html">الرئيسية</a>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg>
+          <span aria-current="page">المنهجية والمصادر</span>
+        </nav>
+        <p class="eyebrow">أمانةٌ قبل الجمال</p>
+        <h1>كيف نختار المحتوى ونتحقق منه</h1>
+        <p>هذه الصفحة تشرح مصادر الموقع، وقواعد نقل النصوص، وكيف نميّز بين القرآن والحديث والدعاء العام، وما الذي لا يفعله الموقع.</p>
+        <div class="page-hero__actions"><a class="btn btn--primary" href="duas.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg> تصفّح الأدعية</a>
+            <a class="btn btn--outline" href="charity.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-hands"></use></svg> باب الخير</a></div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container about-grid">
+        <div class="card">
+          <p class="eyebrow">المنهج</p>
+          <h2>ثلاثة مستويات واضحة للمحتوى</h2>
+          <p>نفصل بوضوح بين الوحي وغيره، ولا ننسب إلى النبي ﷺ إلا ما ثبت بسندٍ مقبول. كل بطاقة تحمل نوع المحتوى والمصدر والمرجع والحكم حيث يلزم.</p>
+          <ol class="about-principles">
+            <li><strong>القرآن الكريم:</strong> نصٌّ بالرسم العثماني من مشروع Tanzil عبر Al Quran Cloud، مع اسم السورة ورقم الآية.</li>
+            <li><strong>الحديث الشريف:</strong> نصٌّ منقول من مصدره مع رقمه وحكمه، اعتمادًا على تصحيح الألباني أو دار السلام حيث ورد.</li>
+            <li><strong>الدعاء العام:</strong> صيغة دعاء لا تُنسب لفظًا إلى النبي ﷺ، ويُذكر أنها عامة وعلى معنى ثابت إن كان لها أصل.</li>
+          </ol>
+          <div class="callout callout--gold about-callout">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg>
+            <div class="callout__body"><span class="callout__title">ما لا نفعله</span><p>لا نضيف حديثًا ضعيفًا على أنه صحيح، ولا ننسب دعاءً عامًا إلى النبي ﷺ، ولا نقدّم تفسيرًا شخصيًا على أنه قول معتمد. ما لم يثبت حكمه لا يُدرج.</p></div>
+          </div>
+        </div>
+        <div class="card card--soft">
+          <p class="eyebrow">المصادر</p>
+          <h2>مراجعنا الأساسية</h2>
+          <ul class="source-list">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-quran"></use></svg><div><strong>Al Quran Cloud / Tanzil</strong><span>النص القرآني بالرسم العثماني — <a href="https://alquran.cloud/" target="_blank" rel="noopener">alquran.cloud <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></span></div></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-book-open"></use></svg><div><strong>Quran.com</strong><span>التحقق من أرقام الآيات والاستماع — <a href="https://quran.com/" target="_blank" rel="noopener">quran.com <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></span></div></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-book"></use></svg><div><strong>Sunnah.com</strong><span>نصوص الأحاديث وأرقامها وأحكامها — <a href="https://sunnah.com/" target="_blank" rel="noopener">sunnah.com <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></span></div></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-clock"></use></svg><div><strong>Islamic Network CDN</strong><span>تلاوة القرآن عند الطلب — <a href="https://islamic.network/" target="_blank" rel="noopener">islamic.network <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></span></div></li>
+          </ul>
+          <div class="about-facts">
+            <div class="about-fact"><strong>18</strong><span>دعاءً موثّقًا في ملف الأدعية</span></div>
+            <div class="about-fact"><strong>27</strong><span>آية مختارة في ستة موضوعات</span></div>
+            <div class="about-fact"><strong>21</strong><span>ذكرًا للصباح والمساء</span></div>
+            <div class="about-fact"><strong>0</strong><span>حسابات أو تتبّع أو تبرعات</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--soft">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">الخصوصية</p>
+          <h2>لا خادم، ولا حساب، ولا تتبّع</h2>
+          <p>الموقع ثابت بالكامل. لا توجد قاعدة بيانات ولا تسجيل دخول ولا تحليلات. تُحفظ تفضيلاتك محليًا في متصفحك، ويمكنك مسحها في أي وقت من إعدادات المتصفح.</p>
+          <ul class="tips-list">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-check"></use></svg> الثيم والإهداء والمفضلة وتقدّم المسبحة والأذكار تُحفظ في <code>localStorage</code>.</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-check"></use></svg> الاسم في رابط المشاركة يظهر لمن يملك الرابط؛ شارك الرابط مع من تثق به فقط.</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-check"></use></svg> المحرر المحلي لا يرسل شيئًا إلى أي خادم؛ تصدير الملف ونشره خطوة يدوية.</li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-check"></use></svg> لا توجد كوكيز تتبّع ولا إعلانات ولا روابط تبرع.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="eyebrow">التقنية</p>
+          <h2>موقع ثابت وتطبيق ويب</h2>
+          <p>بُني الموقع بـ HTML وCSS وJavaScript دون إطار عمل أو خادم. يعمل دون اتصال بعد أول زيارة، ويمكن تثبيته كتطبيق على الهاتف أو الكمبيوتر.</p>
+          <div class="card__actions">
+            <button class="btn btn--outline btn--sm" type="button" data-install-app><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-install"></use></svg> كيف أثبّته؟</button>
+            <a class="btn btn--ghost btn--sm" href="../index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-home"></use></svg> الرئيسية</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container about-grid">
+        <div class="card">
+          <p class="eyebrow">التراخيص</p>
+          <h2>الخطوط والأدوات</h2>
+          <p>نستخدم خطوطًا عربية مفتوحة المصدر، ومكتبة QR مرخّصة بـ MIT. النصوص الكاملة للتراخيص محفوظة داخل المشروع.</p>
+          <ul class="license-list">
+            <li><span>Amiri — OFL 1.1</span><a href="../assets/licenses/Amiri-OFL.txt" target="_blank" rel="noopener">الترخيص <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></li>
+            <li><span>Noto Naskh Arabic — OFL 1.1</span><a href="../assets/licenses/NotoNaskhArabic-OFL.txt" target="_blank" rel="noopener">الترخيص <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></li>
+            <li><span>IBM Plex Sans Arabic — OFL 1.1</span><a href="../assets/licenses/IBMPlexSansArabic-OFL.txt" target="_blank" rel="noopener">الترخيص <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></li>
+            <li><span>qrcode-generator 1.4.4 — MIT</span><a href="../assets/licenses/qrcode-generator-MIT.txt" target="_blank" rel="noopener">الترخيص <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg></a></li>
+          </ul>
+        </div>
+        <div class="card card--soft">
+          <p class="eyebrow">تنبيه</p>
+          <h2>الموقع ليس جهة فتوى</h2>
+          <p>المحتوى للتعريف والتذكير، ولا يُغني عن سؤال أهل العلم في المسائل الخاصة. إذا وجدت خطأً في نص أو مصدر، فتحقق من المصدر الأصلي وأبلغ من تعرف من المشرفين على النسخة المنشورة.</p>
+          <p class="small muted">آخر تحديث للمحتوى: <span data-year>2026</span> — راجع تاريخ <code>data/site.json</code> وملفات المحتوى.</p>
+          <div class="card__actions">
+            <a class="btn btn--outline btn--sm" href="editor.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-edit"></use></svg> المحرر المحلي</a>
+            <a class="btn btn--ghost btn--sm" href="duas.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg> الأدعية</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="../index.html" aria-label="تسبيح — الصفحة الرئيسية">
+            <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-star"></use></svg></span>
+            <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+          </a>
+          <p>مساحة هادئة للدعاء والذكر والصدقة. لا حسابات، ولا تتبّع، ولا جمع تبرعات. فقط محتوى موثّق، وإهداءٌ صادق.</p>
+        </div>
+        <nav class="footer__nav" aria-label="روابط الموقع">
+          <h2>أبواب الموقع</h2>
+          <a href="../index.html">الرئيسية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/duas.html">الأدعية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/quran.html">القرآن الكريم <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/tasbeeh.html">المسبحة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/adhkar.html">أذكار الصباح والمساء <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/charity.html">باب الخير <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/about.html">المنهجية والمصادر <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/editor.html">المحرر المحلي <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+        </nav>
+        <div class="footer__dedication">
+          <p class="eyebrow">إهداء</p>
+          <p data-dedication="full">اللهم اجعل هذا العمل صدقة جارية عن موتى المسلمين، واغفر لمن أُهدي إليه، وارحم موتى المسلمين.</p>
+          <button class="btn btn--outline btn--sm" type="button" data-open-personalize>تغيير الإهداء</button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> تسبيح — صدقة جارية.</p>
+        <p class="footer__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg> المحتوى موثّق من مصادره. <a href="../pages/about.html">المنهجية</a></p>
+        <p><button class="btn btn--ghost btn--sm" type="button" data-install-app>تثبيت التطبيق</button></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js" defer></script>
+  <script src="../assets/js/share.js" defer></script>
+
+</body>
+</html>

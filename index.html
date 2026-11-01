@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>تسبيح — صدقة جارية</title>
+  <meta name="description" content="منصة إسلامية هادئة للأدعية والقرآن والمسبحة وأذكار الصباح والمساء وباب الخير، مع إمكانية إهداء العمل صدقة جارية عن من تحب.">
+  <meta name="theme-color" content="#0b3b2e">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="تسبيح — صدقة جارية">
+  <meta property="og:description" content="دعاءٌ لا ينقطع، وذكرٌ يطمئن القلب، وبابُ خيرٍ يُهدى لمن تحب.">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/fonts/amiri-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/tools.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("tasbeeh.theme.v1");
+        if (!theme) theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body data-root="./" data-page="home" data-page-path="">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="تسبيح — الصفحة الرئيسية">
+        <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true"><use href="assets/icons.svg#i-star"></use></svg></span>
+        <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" data-nav="home">الرئيسية</a>
+        <a href="pages/duas.html" data-nav="duas">الأدعية</a>
+        <a href="pages/quran.html" data-nav="quran">القرآن الكريم</a>
+        <a href="pages/tasbeeh.html" data-nav="tasbeeh">المسبحة</a>
+        <a href="pages/adhkar.html" data-nav="adhkar">أذكار الصباح والمساء</a>
+        <a href="pages/charity.html" data-nav="charity">باب الخير</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="تبديل الوضع">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-moon"></use></svg>
+        </button>
+        <button class="btn btn--outline btn--sm header__dedicate" type="button" data-open-personalize aria-label="إهداء العمل صدقة جارية">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-heart"></use></svg>
+          <span class="btn__label">إهداء</span>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+          <p class="eyebrow">منصة إسلامية هادئة</p>
+          <h1 class="hero__title">
+            <span class="hero__title-main">تسبيح</span>
+            <span class="hero__title-sub">صدقةٌ جارية</span>
+          </h1>
+          <p class="hero__lead">دعاءٌ لا ينقطع، وذكرٌ يطمئن القلب، وبابُ خيرٍ صغيرٌ يبقى أثره. اجعل لك وِردًا، وأهدِ ثوابه لمن تحب.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="pages/tasbeeh.html">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-beads"></use></svg>
+              ابدأ التسبيح
+            </a>
+            <a class="btn btn--outline btn--lg" href="pages/duas.html">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-dua"></use></svg>
+              تصفّح الأدعية
+            </a>
+          </div>
+          <div class="hero__meta">
+            <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-shield"></use></svg> محتوى موثّق بمصادره</span>
+            <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-quran"></use></svg> رسم عثماني</span>
+            <span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-heart"></use></svg> إهداء شخصي</span>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="dedication-card">
+            <div class="dedication-card__head">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-gift"></use></svg>
+              <p class="dedication-card__label">إهداء شخصي</p>
+            </div>
+            <h2>اجعل هذا العمل صدقة جارية عن</h2>
+            <p class="dedication-card__current" data-dedication="full">اللهم اجعل هذا العمل صدقة جارية عن موتى المسلمين، واغفر لمن أُهدي إليه، وارحم موتى المسلمين.</p>
+            <form class="dedication-form" data-personalize-form novalidate>
+              <div class="dedication-form__row">
+                <div class="field">
+                  <label for="home-name">الاسم</label>
+                  <input class="input" id="home-name" name="name" data-personalize-name type="text" maxlength="80" autocomplete="off" placeholder="مثال: فاطمة زهراء">
+                </div>
+                <div class="field">
+                  <label for="home-rel">صفة القرابة</label>
+                  <select class="select" id="home-rel" name="rel" data-personalize-rel></select>
+                </div>
+              </div>
+              <p class="field__error" data-personalize-error hidden></p>
+              <div class="dedication-form__actions">
+                <button class="btn btn--primary" type="submit">حفظ الإهداء</button>
+                <button class="btn btn--ghost" type="button" data-reset-personalization>إزالة</button>
+                <button class="btn btn--ghost" type="button" data-copy-dedication>
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-link"></use></svg>
+                  نسخ رابط الإهداء
+                </button>
+                <a class="btn btn--ghost" href="pages/sadaqa.html">بطاقة الإهداء</a>
+              </div>
+            </form>
+            <p class="dedication-card__note">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg>
+              يُحفظ الاسم على جهازك، ويظهر لمن يفتح رابط الإهداء. لا نجمع بيانات ولا نرسلها إلى خادم.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">أبواب الموقع</p>
+          <h2>اختر بابًا، وابدأ بخطوة</h2>
+          <p>كل بابٍ صُمم ليكون خفيفًا على القلب، واضح المصدر، سهل الاستخدام على الهاتف والكمبيوتر.</p>
+        </div>
+        <div class="portal-grid">
+          <a class="portal-card reveal" href="pages/duas.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-dua"></use></svg></span>
+            <h3>الأدعية</h3>
+            <p>أدعية مأثورة للميت وللمؤمنين، مع التصنيف والبحث والمفضلة والمصدر والحكم.</p>
+            <span class="portal-card__foot">ادخل إلى الأدعية <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+          <a class="portal-card reveal" href="pages/quran.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-quran"></use></svg></span>
+            <h3>القرآن الكريم</h3>
+            <p>آيات مختارة للمغفرة والرحمة والنور والثبات والنجاة ودخول الجنة، بالرسم العثماني.</p>
+            <span class="portal-card__foot">تدبّر الآيات <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+          <a class="portal-card reveal" href="pages/tasbeeh.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-beads"></use></svg></span>
+            <h3>المسبحة</h3>
+            <p>عدّ أذكارك بهدوء، مع أهداف للعدّ، وحفظ تلقائي للتقدم، ودعم الاهتزاز.</p>
+            <span class="portal-card__foot">افتح المسبحة <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+          <a class="portal-card reveal" href="pages/adhkar.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-sun"></use></svg></span>
+            <h3>أذكار الصباح والمساء</h3>
+            <p>وردك اليومي مع عدّ التكرارات، ومتابعة الإنجاز، وإمكانية إعادة الضبط.</p>
+            <span class="portal-card__foot">ابدأ الورد <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+          <a class="portal-card reveal" href="pages/charity.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-hands"></use></svg></span>
+            <h3>باب الخير</h3>
+            <p>صدقات جارية وأفكار عملية لا تحتاج مالًا كثيرًا، مع أدلتها من الكتاب والسنة.</p>
+            <span class="portal-card__foot">افتح باب الخير <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+          <a class="portal-card reveal" href="pages/sadaqa.html">
+            <span class="portal-card__icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-gift"></use></svg></span>
+            <h3>بطاقة الإهداء</h3>
+            <p>صفحة مخصصة باسم من تحب، مع دعاء الإهداء، ورمز QR، وخيار تحميل البطاقة.</p>
+            <span class="portal-card__foot">أهدِ العمل <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head spread reveal">
+          <div>
+            <p class="eyebrow">دعاء اليوم</p>
+            <h2>دعوةٌ تبدأ بها يومك</h2>
+            <p>دعاء واحد، حاضر القلب، يكفي ليكون لهذا اليوم أثر.</p>
+          </div>
+          <a class="btn btn--outline" href="pages/duas.html">كل الأدعية <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+        </div>
+        <div class="reveal" id="daily-dua" aria-live="polite">
+          <div class="daily-card">
+            <div class="daily-card__loading">
+              <div class="skeleton skeleton--line"></div>
+              <div class="skeleton skeleton--line"></div>
+              <div class="skeleton skeleton--line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="quick-panel reveal" data-tasbeeh-widget data-mode="compact">
+          <div class="quick-panel__inner">
+            <div>
+              <p class="eyebrow">مسبحة سريعة</p>
+              <h2>سبّح الآن، ولو مرة</h2>
+              <p>اختر ذكرًا، واضغط العدّاد. يُحفظ تقدمك تلقائيًا على هذا الجهاز، ويمكنك فتح المسبحة الكاملة للأهداف والتفاصيل.</p>
+              <div class="quick-panel__actions">
+                <a class="btn btn--outline btn--sm" href="pages/tasbeeh.html">المسبحة الكاملة <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+              </div>
+            </div>
+            <div class="quick-counter" data-tasbeeh-app>
+              <div class="loading-state">
+                <span class="spinner" aria-hidden="true"></span>
+                <p>جارٍ تجهيز المسبحة…</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--center">كيف تعمل؟</p>
+          <h2>ثلاث خطوات، وأجرٌ يبقى</h2>
+          <p>لا تحتاج حسابًا ولا تسجيلًا. فقط نيةٌ صادقة، ثم خطوة صغيرة تدوم.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__number">١</span>
+            <h3>اختر بابًا</h3>
+            <p>دعاءٌ تدعو به، أو ذكرٌ تعدّه، أو صدقةٌ صغيرة، أو علمٌ تنشره.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__number">٢</span>
+            <h3>أهدِ الثواب</h3>
+            <p>اكتب اسم من تحب وصفة قرابته، وسيظهر الإهداء في الموقع وفي رابط المشاركة.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step__number">٣</span>
+            <h3>شارك الأجر</h3>
+            <p>أرسل الرابط أو رمز QR لمن تحب، ليدعو معك، ويبقى العمل صدقة جارية.</p>
+          </div>
+        </div>
+        <div class="callout callout--gold reveal" style="margin-top:1.4rem">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-quote"></use></svg>
+          <div class="callout__body">
+            <span class="callout__title">أصل الباب</span>
+            <p>«إِذَا مَاتَ الإِنْسَانُ انْقَطَعَ عَنْهُ عَمَلُهُ إِلاَّ مِنْ ثَلاَثَةٍ: إِلاَّ مِنْ صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ» — رواه مسلم (1631).</p>
+            <p class="small" style="margin-top:.4rem"><a href="https://sunnah.com/muslim:1631" target="_blank" rel="noopener">صحيح مسلم 1631 <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-external"></use></svg></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="share-panel reveal">
+          <div class="share-panel__inner">
+            <div>
+              <p class="eyebrow">شارك الأجر</p>
+              <h2>دعوةٌ واحدة قد تصل إلى قلب</h2>
+              <p>شارك الموقع مع من تحب، أو أنشئ رمز QR يفتح صفحة الإهداء بالاسم الذي اخترته.</p>
+              <div class="share-panel__actions">
+                <button class="btn btn--primary" type="button" data-open-share data-share-path="">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-share"></use></svg>
+                  مشاركة الموقع
+                </button>
+                <button class="btn btn--outline" type="button" data-share-whatsapp data-share-path="">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg>
+                  واتساب
+                </button>
+                <button class="btn btn--outline" type="button" data-open-qr data-qr-path="">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-qr"></use></svg>
+                  رمز QR
+                </button>
+                <button class="btn btn--outline" type="button" data-copy-link data-share-path="">
+                  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-link"></use></svg>
+                  نسخ الرابط
+                </button>
+              </div>
+              <p class="share-panel__note">روابط المشاركة تستخدم رابط الموقع المنشور فقط، ولا تُنشئ رمز QR لرابط محلي.</p>
+            </div>
+            <div class="share-panel__visual">
+              <div class="ornament"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-star"></use></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="callout callout--emerald reveal">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-install"></use></svg>
+          <div class="callout__body">
+            <span class="callout__title">ثبّت تسبيح على جهازك</span>
+            <p>يعمل الموقع دون اتصال بعد أول زيارة، ويمكن تثبيته كتطبيق على الهاتف أو الكمبيوتر. <button class="btn btn--soft btn--sm" type="button" data-install-app>كيف أثبّته؟</button></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" aria-label="تسبيح — الصفحة الرئيسية">
+            <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true"><use href="assets/icons.svg#i-star"></use></svg></span>
+            <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+          </a>
+          <p>مساحة هادئة للدعاء والذكر والصدقة. لا حسابات، ولا تتبّع، ولا جمع تبرعات. فقط محتوى موثّق، وإهداءٌ صادق.</p>
+        </div>
+        <nav class="footer__nav" aria-label="روابط الموقع">
+          <h2>أبواب الموقع</h2>
+          <a href="index.html">الرئيسية <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/duas.html">الأدعية <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/quran.html">القرآن الكريم <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/tasbeeh.html">المسبحة <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/adhkar.html">أذكار الصباح والمساء <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/charity.html">باب الخير <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/about.html">المنهجية والمصادر <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="pages/editor.html">المحرر المحلي <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg></a>
+        </nav>
+        <div class="footer__dedication">
+          <p class="eyebrow">إهداء</p>
+          <p data-dedication="full">اللهم اجعل هذا العمل صدقة جارية عن موتى المسلمين، واغفر لمن أُهدي إليه، وارحم موتى المسلمين.</p>
+          <button class="btn btn--outline btn--sm" type="button" data-open-personalize>تغيير الإهداء</button>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> تسبيح — صدقة جارية.</p>
+        <p class="footer__note"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-shield"></use></svg> المحتوى موثّق من مصادره. <a href="pages/about.html">المنهجية</a></p>
+        <p><button class="btn btn--ghost btn--sm" type="button" data-install-app>تثبيت التطبيق</button></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/share.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/tasbeeh.js" defer></script>
+</body>
+</html>

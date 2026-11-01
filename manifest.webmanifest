@@ -1,0 +1,66 @@
+{
+  "id": "./",
+  "name": "تسبيح — صدقة جارية",
+  "short_name": "تسبيح",
+  "description": "مساحة إسلامية هادئة للأدعية والقرآن والمسبحة وأذكار الصباح والمساء وباب الخير، مع إهداء العمل صدقة جارية عن من تحب.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#fbf6ea",
+  "theme_color": "#0b3b2e",
+  "categories": ["lifestyle", "books", "education"],
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "الأدعية",
+      "short_name": "الأدعية",
+      "description": "أدعية مأثورة مع المصادر والأحكام",
+      "url": "./pages/duas.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "القرآن الكريم",
+      "short_name": "القرآن",
+      "description": "آيات مختارة بالرسم العثماني",
+      "url": "./pages/quran.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "المسبحة",
+      "short_name": "المسبحة",
+      "description": "عدّ الأذكار مع حفظ التقدم",
+      "url": "./pages/tasbeeh.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "أذكار الصباح والمساء",
+      "short_name": "الأذكار",
+      "description": "وردك اليومي مع متابعة الإنجاز",
+      "url": "./pages/adhkar.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+/* =========================================================
+   تسبيح — Responsive
+   ========================================================= */
+
+@media (max-width: 1120px) {
+  .nav a { padding-inline: 0.5rem; font-size: 0.82rem; }
+  .header__inner { gap: 0.6rem; }
+}
+
+@media (max-width: 1060px) {
+  .nav-toggle { display: inline-grid; }
+  .nav {
+    position: fixed;
+    top: calc(var(--header-h) + 10px);
+    inset-inline: clamp(12px, 4vw, 26px);
+    z-index: 61;
+    display: grid;
+    gap: 0.18rem;
+    max-height: calc(100dvh - var(--header-h) - 24px);
+    overflow-y: auto;
+    padding: 0.7rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0.22s;
+  }
+  .nav.is-open { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+  .nav a {
+    min-height: 46px;
+    padding: 0.55rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.92rem;
+  }
+  .nav a[aria-current="page"] { background: var(--gold-pale); }
+  body.nav-open { overflow: hidden; }
+  body.nav-open::after {
+    content: "";
+    position: fixed;
+    inset: var(--header-h) 0 0;
+    z-index: 55;
+    background: rgba(6, 37, 27, 0.38);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  .hero__inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding: clamp(2.6rem, 6vw, 4rem) 0; }
+  .hero__copy { max-width: 720px; }
+  .hero__card { width: min(100%, 590px); }
+  .hero::after { inset-inline-start: auto; inset-inline-end: -120px; opacity: 0.09; }
+}
+
+@media (max-width: 980px) {
+  .portal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .duas-grid, .quran-grid, .adhkar-grid, .charity-grid { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-layout { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-side { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .tasbeeh-layout { grid-template-columns: minmax(0, 1fr); }
+  .tasbeeh-side { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .editor-layout { grid-template-columns: minmax(0, 1fr); }
+  .editor-sidebar { position: static; }
+  .editor-list { max-height: 280px; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .charity-intro { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .footer__dedication { grid-column: 1 / -1; }
+  .quick-panel__inner { grid-template-columns: minmax(0, 1fr); }
+  .quick-counter { max-width: 360px; margin-inline: auto; }
+  .share-panel__inner { grid-template-columns: minmax(0, 1fr); }
+  .share-panel__visual { order: -1; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .charity-no-money { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sadaqa-ideas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adhkar-head { grid-template-columns: minmax(0, 1fr); }
+  .adhkar-tabs { justify-self: stretch; display: flex; }
+  .adhkar-tab { flex: 1; justify-content: center; }
+}
+
+@media (max-width: 760px) {
+  :root { --header-h: 70px; }
+  .brand__mark { width: 40px; height: 40px; border-radius: 12px; }
+  .brand__mark .icon { width: 22px; height: 22px; }
+  .brand__text strong { font-size: 1.4rem; }
+  .brand__text small { font-size: 0.62rem; }
+  .header__dedicate .btn__label { display: none; }
+  .header__dedicate { width: 42px; min-width: 42px; padding: 0; }
+  .header__dedicate .icon { width: 1.15rem; height: 1.15rem; }
+  .page-hero { padding: 2rem 0 2.2rem; }
+  .page-hero__inner { gap: 0.7rem; }
+  .hero__title-main { font-size: clamp(3.6rem, 15vw, 5rem); }
+  .hero__title-sub { font-size: clamp(1.3rem, 5vw, 1.7rem); }
+  .hero__actions .btn { flex: 1 1 auto; }
+  .portal-grid { grid-template-columns: minmax(0, 1fr); }
+  .portal-card { padding: 1.15rem; }
+  .portal-card__icon { width: 46px; height: 46px; margin-bottom: 0.8rem; }
+  .daily-card { padding: 1.2rem; }
+  .daily-card__actions .btn { flex: 1 1 auto; }
+  .toolbar__top { grid-template-columns: minmax(0, 1fr); }
+  .toolbar__bottom { align-items: flex-start; }
+  .dua-card { padding: 1.1rem; }
+  .dua-card__actions .btn { flex: 1 1 auto; }
+  .verse-card { padding: 1.1rem; }
+  .charity-card { padding: 1.1rem; }
+  .charity-card__actions .btn { flex: 1 1 auto; }
+  .charity-no-money { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-ideas { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-side { grid-template-columns: minmax(0, 1fr); }
+  .tasbeeh-side { grid-template-columns: minmax(0, 1fr); }
+  .virtues-grid { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-card { padding: 1.4rem 1.1rem; }
+  .sadaqa-card__title { font-size: clamp(1.65rem, 6vw, 2.1rem); }
+  .sadaqa-card__name { font-size: clamp(1.3rem, 5.4vw, 1.8rem); }
+  .quran-group__head { margin-bottom: 0.8rem; }
+  .footer__top { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .footer__dedication { grid-column: auto; }
+  .footer__bottom { justify-content: center; text-align: center; }
+  .editor-form .form-row { grid-template-columns: minmax(0, 1fr); }
+  .editor-form .field--full { grid-column: auto; }
+  .editor-form-card { padding: 1.1rem; }
+  .dialog__actions .btn { flex: 1 1 100%; }
+  .qr-actions .btn { flex: 1 1 100%; }
+}
+
+@media (max-width: 600px) {
+  .container { width: calc(100% - 28px); }
+  .section { padding: 3rem 0; }
+  .section--tight { padding: 2.2rem 0; }
+  .hero__basmala { font-size: 1.1rem; }
+  .hero__lead { line-height: 1.9; }
+  .hero__meta { gap: 0.45rem 1rem; font-size: 0.7rem; }
+  .dedication-form__row { grid-template-columns: minmax(0, 1fr); }
+  .form-row { grid-template-columns: minmax(0, 1fr); }
+  .sadaqa-form .form-row { grid-template-columns: minmax(0, 1fr); }
+  .toolbar { padding: 0.9rem; }
+  .toolbar__filters { width: 100%; }
+  .toolbar__filters .chip { flex: 1 1 auto; justify-content: center; }
+  .toolbar__toggle { width: 100%; justify-content: center; }
+  .chips-scroll { margin-inline: -0.2rem; padding-inline: 0.2rem; }
+  .dua-card__actions .btn,
+  .verse-card__actions .btn,
+  .charity-card__actions .btn,
+  .sadaqa-card__actions .btn { flex: 1 1 calc(50% - 0.4rem); }
+  .adhkar-progress-card { padding: 0.9rem; }
+  .dhikr-card { padding: 1rem; }
+  .dhikr-card__actions { align-items: stretch; }
+  .dhikr-counter { flex: 1 1 auto; justify-content: center; }
+  .dhikr-card__small-actions { flex: 1 1 auto; justify-content: flex-end; }
+  .completion-banner { align-items: flex-start; }
+  .count-button { width: min(100%, 300px); }
+  .count-button__center { padding: 1rem; }
+  .counter-card { padding: 1.1rem; }
+  .counter-card__head { justify-content: center; }
+  .phrase-selector { gap: 0.3rem; }
+  .phrase-chip { font-size: 0.72rem; padding-inline: 0.6rem; }
+  .tasbeeh-actions .btn { flex: 1 1 auto; }
+  .editor-sidebar { padding: 0.8rem; }
+  .editor-list { max-height: 230px; }
+  .editor-form__actions .btn { flex: 1 1 100%; }
+  .editor-export__actions .btn { flex: 1 1 100%; }
+  .about-facts { grid-template-columns: minmax(0, 1fr); }
+  .back-to-top { width: 38px; height: 38px; inset-inline-start: 0.7rem; }
+  .toast { border-radius: 16px; font-size: 0.78rem; }
+}
+
+@media (max-width: 420px) {
+  .container { width: calc(100% - 24px); }
+  .header__inner { gap: 0.4rem; }
+  .brand { gap: 0.5rem; }
+  .brand__text strong { font-size: 1.28rem; }
+  .brand__text small { font-size: 0.58rem; }
+  .brand__mark { width: 38px; height: 38px; }
+  .header__actions { gap: 0.3rem; }
+  .icon-btn { width: 38px; height: 38px; border-radius: 10px; }
+  .header__dedicate { width: 38px; min-width: 38px; }
+  .hero__title-main { font-size: 3.4rem; }
+  .hero__actions { gap: 0.5rem; }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .dedication-card { padding: 1.1rem; }
+  .dedication-card h2 { font-size: 1.25rem; }
+  .dedication-form__actions .btn { flex: 1 1 100%; }
+  .btn { min-height: 42px; font-size: 0.86rem; }
+  .btn--sm { min-height: 34px; }
+  .page-hero h1 { font-size: 2rem; }
+  .dua-card__actions .btn,
+  .verse-card__actions .btn,
+  .charity-card__actions .btn,
+  .sadaqa-card__actions .btn { flex: 1 1 100%; }
+  .sadaqa-card__actions .btn { justify-content: center; }
+  .qr-frame { width: min(100%, 250px); }
+  .dialog__panel { padding: 1.1rem; }
+  .footer__inner { padding-top: 2.2rem; }
+}
+
+@media (max-width: 340px) {
+  .brand__text small { display: none; }
+  .brand__text strong { font-size: 1.18rem; }
+  .header__actions .icon-btn,
+  .header__dedicate { width: 36px; height: 36px; min-width: 36px; }
+  .hero__title-main { font-size: 3rem; }
+  .hero__basmala { font-size: 0.98rem; }
+  .count-button__count { font-size: 3.6rem; }
+  .count-button__phrase { font-size: 1.2rem; }
+}
+
+/* Larger screens: a touch more air, never wider than comfortable reading */
+@media (min-width: 1500px) {
+  :root { --container: 1240px; }
+  .hero__inner { padding-block: 6.8rem; }
+}
+
+/* Touch devices: avoid sticky hover lifts */
+@media (hover: none) {
+  .portal-card:hover, .btn:hover, .icon-btn:hover, .brand:hover .brand__mark { transform: none; }
+}
