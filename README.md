@@ -541,8 +541,8 @@ https://USERNAME.github.io/REPO/
 
 | القناة | الرابط |
 |---|---|
-| GitHub | https://github.com/essayd |
-| LinkedIn | https://www.linkedin.com/in/abd-el-mouneime-essayd-589a63304 |
+| GitHub | https://github.com/abdelmouniemeessay |
+| LinkedIn | https://www.linkedin.com/in/abd-el-mounieme-essayd-589a63304?utm_source=share_via&utm_content=profile&utm_medium=member_android |
 | Facebook | https://www.facebook.com/share/1FzVx9LVn7/ |
 | Instagram | https://www.instagram.com/ess._.moun3im |
 
@@ -575,7 +575,7 @@ https://USERNAME.github.io/REPO/
 - **أهداف اللمس:** **0 عناصر** أقل من 44×44 بكسل عند 320 و390 بكسل.
 - **الوضع الداكن:** **0 إخفاقات** عند 390 و1440 بكسل.
 - **الروابط الداخلية:** فحص 37 رابطًا، **0 مكسور**.
-- **PWA:** الـService Worker نشط، والكاش `tasbeeh-static-v2.0.0` يحتوي 62 أصلًا، والصفحات الرئيسية تعمل دون اتصال.
+- **PWA:** الـService Worker نشط، والكاش `tasbeeh-static-v2.0.1` يحتوي 62 أصلًا، والصفحات الرئيسية تعمل دون اتصال.
 - **404:** مسار عميق محلي، ومحاكاة مسار `*.github.io/REPO/`؛ تُحمَّل الأنماط والروابط بالقاعدة الصحيحة.
 - **وحدة التحكم:** لا أخطاء في الصفحات العادية. صفحة 404 نفسها تُصدر رسالة 404 للمستند في أدوات المتصفح، وهذا سلوك الخادم المتوقع وليس خطأ في الصفحة.
 
