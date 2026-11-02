@@ -19,9 +19,10 @@
           if (/\.github\.io$/i.test(location.hostname)) {
             var first = location.pathname.split("/").filter(Boolean)[0];
             base = first ? "/" + first + "/" : "/";
-          } else {
-            // Custom domains and local servers: derive the directory of the
-            // missing URL, then step back out of one of the site's own folders.
+          } else if (/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])$/i.test(location.hostname) || /\.(local|localhost)$/i.test(location.hostname) || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname)) {
+            // Local development may serve the site under a folder such as
+            // /sadka/. Derive the directory of the missing URL, then step back
+            // out of one of the site's own folders.
             base = location.pathname.replace(/[^/]*$/, "") || "/";
             var knownDirs = ["/pages/", "/assets/", "/data/"];
             for (var i = 0; i < knownDirs.length; i += 1) {
@@ -31,20 +32,30 @@
                 break;
               }
             }
+          } else {
+            // A custom domain (or another static host) serves the site from
+            // the domain root, so a deep missing URL must still use "/".
+            base = "/";
           }
         }
       } catch (error) {}
       document.write('<base href="' + base + '">');
+      // The 404 page is served for arbitrary missing URLs, so its asset URLs
+      // cannot be written as relative paths in the HTML: the browser's preload
+      // scanner would fetch them relative to the missing path before the base
+      // element exists. Inject them after the base is known instead.
+      [
+        '<link rel="icon" href="' + base + 'assets/images/favicon.svg" type="image/svg+xml">',
+        '<link rel="manifest" href="' + base + 'manifest.webmanifest">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/base.css">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/components.css">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/pages.css">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/tools.css">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/responsive.css">',
+        '<link rel="stylesheet" href="' + base + 'assets/css/v2.css">'
+      ].forEach(function (tag) { document.write(tag); });
     })();
   </script>
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <link rel="stylesheet" href="assets/css/tools.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <link rel="stylesheet" href="assets/css/v2.css">
   <script>
     (function () {
       try {
@@ -217,7 +228,20 @@
       </div>
     </div>
   </footer>
-  <script src="assets/js/app.js" defer></script>
-  <script src="assets/js/share.js" defer></script>
+  <script>
+    (function () {
+      var base = (document.querySelector("base") || {}).href || "./";
+      var files = ["assets/js/app.js", "assets/js/share.js"];
+      function load(index) {
+        if (index >= files.length) return;
+        var script = document.createElement("script");
+        script.src = base + files[index];
+        script.onload = function () { load(index + 1); };
+        script.onerror = function () { load(index + 1); };
+        document.body.appendChild(script);
+      }
+      load(0);
+    })();
+  </script>
 </body>
 </html>
