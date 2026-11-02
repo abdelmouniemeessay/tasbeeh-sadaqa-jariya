@@ -22,7 +22,7 @@
     const source = T.escapeHTML(evidence.source || "مصدر غير محدد");
     const reference = evidence.reference ? " — " + T.escapeHTML(evidence.reference) : "";
     const link = url
-      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener">' + source + reference + " " + T.icon("external") + "</a>"
+      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener noreferrer">' + source + reference + " " + T.icon("external") + "</a>"
       : "<span>" + source + reference + "</span>";
     const grade = evidence.grade ? '<span class="badge badge--grade">' + T.escapeHTML(evidence.grade) + "</span>" : "";
     const prefix = evidence.prefix

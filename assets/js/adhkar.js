@@ -75,7 +75,7 @@
     const label = T.escapeHTML(item.source || "مصدر غير محدد");
     const reference = item.reference ? " — " + T.escapeHTML(item.reference) : "";
     const link = url
-      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener">' + label + reference + " " + T.icon("external") + "</a>"
+      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener noreferrer">' + label + reference + " " + T.icon("external") + "</a>"
       : "<span>" + label + reference + "</span>";
     const grade = item.grade ? '<span class="badge badge--grade">' + T.escapeHTML(item.grade) + "</span>" : "";
     return link + grade;

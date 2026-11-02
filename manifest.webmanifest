@@ -10,8 +10,8 @@
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "any",
-  "background_color": "#fbf6ea",
-  "theme_color": "#0b3b2e",
+  "background_color": "#f8f6f0",
+  "theme_color": "#183d32",
   "categories": ["lifestyle", "books", "education"],
   "icons": [
     {
@@ -34,6 +34,13 @@
     }
   ],
   "shortcuts": [
+    {
+      "name": "مركز المساعدة",
+      "short_name": "المساعدة",
+      "description": "إجابات عن الإهداء والقرآن والأدعية والأذكار والمسبحة",
+      "url": "./pages/help.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    },
     {
       "name": "الأدعية",
       "short_name": "الأدعية",

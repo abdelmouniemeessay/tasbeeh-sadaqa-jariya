@@ -90,7 +90,7 @@
             '<strong>سورة ' + T.escapeHTML(verse.surah) + "</strong>" +
             "<span>الآية " + T.formatNumber(verse.ayah) + "</span>" +
           "</div>" +
-          '<a class="verse-card__ayah" href="' + external + '" target="_blank" rel="noopener" aria-label="فتح الآية في Quran.com">' +
+          '<a class="verse-card__ayah" href="' + external + '" target="_blank" rel="noopener noreferrer" aria-label="فتح الآية في Quran.com">' +
             T.icon("external") + " quran.com" +
           "</a>" +
         "</div>" +

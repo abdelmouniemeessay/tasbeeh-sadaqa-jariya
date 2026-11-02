@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>أذكار الصباح والمساء — تسبيح صدقة جارية</title>
   <meta name="description" content="أذكار الصباح والمساء من الكتاب والسنة، مع التكرارات والمصادر والأحكام ومتابعة الإنجاز.">
-  <meta name="theme-color" content="#0b3b2e">
+  <meta name="theme-color" content="#183d32">
   <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="website">
   <meta property="og:title" content="أذكار الصباح والمساء — تسبيح صدقة جارية">
@@ -23,11 +23,15 @@
   <link rel="stylesheet" href="../assets/css/pages.css">
   <link rel="stylesheet" href="../assets/css/tools.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/v2.css">
   <script>
     (function () {
       try {
         var theme = localStorage.getItem("tasbeeh.theme.v1");
-        if (!theme) theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        try { theme = JSON.parse(theme); } catch (error) {}
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
         document.documentElement.setAttribute("data-theme", theme);
       } catch (error) {}
     })();
@@ -43,12 +47,54 @@
         <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
       </a>
       <nav class="nav" id="site-nav" aria-label="التنقل الرئيسي">
+        <div class="nav__mobile-head">
+          <span>القائمة</span>
+          <button class="icon-btn nav__close" type="button" data-nav-close aria-label="إغلاق القائمة">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-close"></use></svg>
+          </button>
+        </div>
         <a href="../index.html" data-nav="home">الرئيسية</a>
-        <a href="../pages/duas.html" data-nav="duas">الأدعية</a>
-        <a href="../pages/quran.html" data-nav="quran">القرآن الكريم</a>
-        <a href="../pages/tasbeeh.html" data-nav="tasbeeh">المسبحة</a>
-        <a href="../pages/adhkar.html" data-nav="adhkar" aria-current="page">أذكار الصباح والمساء</a>
-        <a href="../pages/charity.html" data-nav="charity">باب الخير</a>
+        <a href="../pages/sadaqa.html" data-nav="sadaqa">الإهداء الشخصي</a>
+        <div class="nav__group" data-nav-group>
+          <button class="nav__group-toggle" type="button" data-nav-group-toggle aria-expanded="false" aria-controls="nav-good-deeds">
+            <span>أبواب الخير</span>
+            <svg class="icon nav__chevron" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-chevron-down"></use></svg>
+          </button>
+          <div class="nav__panel" id="nav-good-deeds">
+            <div class="nav__panel-head">
+              <p class="nav__panel-title">أبواب الخير</p>
+              <p class="nav__panel-sub">خمسة أبوابٍ مختارة، لكلِّ بابٍ أثره.</p>
+            </div>
+            <a href="../pages/quran.html" data-nav="quran">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-quran"></use></svg>
+              <strong>القرآن</strong><small>آيات للتدبّر</small>
+            </a>
+            <a href="../pages/duas.html" data-nav="duas">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg>
+              <strong>الأدعية</strong><small>مأثورة بمصادرها</small>
+            </a>
+            <a href="../pages/adhkar.html" data-nav="adhkar">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sun"></use></svg>
+              <strong>الأذكار</strong><small>صباح ومساء</small>
+            </a>
+            <a href="../pages/tasbeeh.html" data-nav="tasbeeh">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-beads"></use></svg>
+              <strong>المسبحة</strong><small>عدّاد هادئ</small>
+            </a>
+            <a href="../pages/charity.html" data-nav="charity">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-hands"></use></svg>
+              <strong>الصدقة الجارية</strong><small>أبواب الخير</small>
+            </a>
+          </div>
+        </div>
+        <a href="../pages/help.html" data-nav="help">مركز المساعدة</a>
+        <a href="../pages/about.html" data-nav="about">المصادر</a>
+        <div class="nav__mobile-foot">
+          <button class="btn btn--primary btn--block" type="button" data-open-personalize data-nav-close>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-heart"></use></svg>
+            أهدِ العمل صدقة جارية
+          </button>
+        </div>
       </nav>
       <div class="header__actions">
         <button class="icon-btn" type="button" data-theme-toggle aria-label="تبديل الوضع">
@@ -64,6 +110,8 @@
       </div>
     </div>
   </header>
+
+  <main id="main">
 
     <section class="page-hero">
       <div class="container page-hero__inner">
@@ -149,6 +197,8 @@
       </div>
     </section>
 
+    </main>
+
   <footer class="site-footer">
     <div class="container footer__inner">
       <div class="footer__top">
@@ -159,16 +209,21 @@
           </a>
           <p>مساحة هادئة للدعاء والذكر والصدقة. لا حسابات، ولا تتبّع، ولا جمع تبرعات. فقط محتوى موثّق، وإهداءٌ صادق.</p>
         </div>
-        <nav class="footer__nav" aria-label="روابط الموقع">
-          <h2>أبواب الموقع</h2>
+        <nav class="footer__nav" aria-label="استكشف الموقع">
+          <h2>استكشف</h2>
           <a href="../index.html">الرئيسية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/duas.html">الأدعية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/quran.html">القرآن الكريم <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/tasbeeh.html">المسبحة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/adhkar.html">أذكار الصباح والمساء <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/charity.html">باب الخير <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
-          <a href="../pages/about.html">المنهجية والمصادر <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/sadaqa.html">الإهداء الشخصي <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/help.html">مركز المساعدة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/about.html">المصادر والمنهجية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
           <a href="../pages/editor.html">المحرر المحلي <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+        </nav>
+        <nav class="footer__nav" aria-label="أبواب الخير">
+          <h2>أبواب الخير</h2>
+          <a href="../pages/quran.html">القرآن الكريم <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/duas.html">الأدعية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/adhkar.html">الأذكار <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/tasbeeh.html">المسبحة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/charity.html">الصدقة الجارية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
         </nav>
         <div class="footer__dedication">
           <p class="eyebrow">إهداء</p>
@@ -176,6 +231,37 @@
           <button class="btn btn--outline btn--sm" type="button" data-open-personalize>تغيير الإهداء</button>
         </div>
       </div>
+
+      <section class="developer-card" aria-labelledby="developer-title">
+        <div class="developer-card__intro">
+          <p class="eyebrow">عن المطور</p>
+          <h2 id="developer-title">تواصل مع صاحب الموقع</h2>
+          <p>صُمم هذا الموقع ورُوجع محتواه بعناية ليكون خفيفًا وواضحًا. إن كانت لديك ملاحظة أو تصحيح، تواصل عبر إحدى القنوات التالية.</p>
+        </div>
+        <div class="developer-card__identity">
+          <span class="developer-card__avatar" aria-hidden="true">ع</span>
+          <div>
+            <strong>Abdelmounieme Essayd</strong>
+            <span>عبد المنعم إسعيد</span>
+            <small>مطوّر واجهات أمامية</small>
+          </div>
+        </div>
+        <div class="developer-card__links">
+          <a class="social-link" href="https://github.com/essayd" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-github"></use></svg> GitHub
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/abd-el-mouneime-essayd-589a63304" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-linkedin"></use></svg> LinkedIn
+          </a>
+          <a class="social-link" href="https://www.facebook.com/share/1FzVx9LVn7/" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-facebook"></use></svg> Facebook
+          </a>
+          <a class="social-link" href="https://www.instagram.com/ess._.moun3im" target="_blank" rel="noopener noreferrer" aria-label="Instagram — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-instagram"></use></svg> Instagram
+          </a>
+        </div>
+      </section>
+
       <div class="footer__bottom">
         <p>© <span data-year>2026</span> تسبيح — صدقة جارية.</p>
         <p class="footer__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg> المحتوى موثّق من مصادره. <a href="../pages/about.html">المنهجية</a></p>

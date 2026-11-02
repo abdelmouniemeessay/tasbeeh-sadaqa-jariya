@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>مركز المساعدة — تسبيح صدقة جارية</title>
+  <meta name="description" content="مركز مساعدة تسبيح: إجابات عن الإهداء الشخصي، القرآن، الأدعية، الأذكار، المسبحة، الخصوصية، والتثبيت على الجهاز.">
+  <meta name="theme-color" content="#183d32">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="مركز المساعدة — تسبيح صدقة جارية">
+  <meta property="og:description" content="إجابات واضحة عن طريقة عمل الموقع والإهداء والقرآن والأدعية والأذكار والمسبحة والخصوصية.">
+  <meta property="og:image" content="../assets/images/og-cover.png">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="preload" href="../assets/fonts/amiri-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/ibm-plex-sans-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/v2.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("tasbeeh.theme.v1");
+        try { theme = JSON.parse(theme); } catch (error) {}
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body data-root="../" data-page="help" data-page-path="pages/help.html">
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="تسبيح — الصفحة الرئيسية">
+        <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-star"></use></svg></span>
+        <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="التنقل الرئيسي">
+        <div class="nav__mobile-head">
+          <span>القائمة</span>
+          <button class="icon-btn nav__close" type="button" data-nav-close aria-label="إغلاق القائمة">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-close"></use></svg>
+          </button>
+        </div>
+        <a href="../index.html" data-nav="home">الرئيسية</a>
+        <a href="../pages/sadaqa.html" data-nav="sadaqa">الإهداء الشخصي</a>
+        <div class="nav__group" data-nav-group>
+          <button class="nav__group-toggle" type="button" data-nav-group-toggle aria-expanded="false" aria-controls="nav-good-deeds">
+            <span>أبواب الخير</span>
+            <svg class="icon nav__chevron" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-chevron-down"></use></svg>
+          </button>
+          <div class="nav__panel" id="nav-good-deeds">
+            <div class="nav__panel-head">
+              <p class="nav__panel-title">أبواب الخير</p>
+              <p class="nav__panel-sub">خمسة أبوابٍ مختارة، لكلِّ بابٍ أثره.</p>
+            </div>
+            <a href="../pages/quran.html" data-nav="quran">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-quran"></use></svg>
+              <strong>القرآن</strong><small>آيات للتدبّر</small>
+            </a>
+            <a href="../pages/duas.html" data-nav="duas">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg>
+              <strong>الأدعية</strong><small>مأثورة بمصادرها</small>
+            </a>
+            <a href="../pages/adhkar.html" data-nav="adhkar">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sun"></use></svg>
+              <strong>الأذكار</strong><small>صباح ومساء</small>
+            </a>
+            <a href="../pages/tasbeeh.html" data-nav="tasbeeh">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-beads"></use></svg>
+              <strong>المسبحة</strong><small>عدّاد هادئ</small>
+            </a>
+            <a href="../pages/charity.html" data-nav="charity">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-hands"></use></svg>
+              <strong>الصدقة الجارية</strong><small>أبواب الخير</small>
+            </a>
+          </div>
+        </div>
+        <a href="../pages/help.html" data-nav="help">مركز المساعدة</a>
+        <a href="../pages/about.html" data-nav="about">المصادر</a>
+        <div class="nav__mobile-foot">
+          <button class="btn btn--primary btn--block" type="button" data-open-personalize data-nav-close>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-heart"></use></svg>
+            أهدِ العمل صدقة جارية
+          </button>
+        </div>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="تبديل الوضع">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-moon"></use></svg>
+        </button>
+        <button class="btn btn--outline btn--sm header__dedicate" type="button" data-open-personalize aria-label="إهداء العمل صدقة جارية">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-heart"></use></svg>
+          <span class="btn__label">إهداء</span>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero help-hero">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumbs" aria-label="مسار التصفح">
+          <a href="../index.html">الرئيسية</a>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg>
+          <span aria-current="page">مركز المساعدة</span>
+        </nav>
+        <p class="eyebrow">دليلٌ مختصر وواضح</p>
+        <h1>مركز المساعدة</h1>
+        <p>كل ما تحتاج معرفته عن الإهداء الشخصي، والقرآن، والأدعية، والأذكار، والمسبحة، والخصوصية. ابحث بكلمة، أو اختر تصنيفًا، ثم افتح السؤال.</p>
+        <div class="help-hero__search">
+          <div class="help-search" role="search">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-search"></use></svg>
+            <label class="sr-only" for="help-search">ابحث في مركز المساعدة</label>
+            <input id="help-search" type="search" placeholder="ابحث: الإهداء، التثبيت، حفظ التقدم، الخصوصية…" autocomplete="off" spellcheck="false">
+            <button class="help-search__clear" type="button" data-help-clear aria-label="مسح البحث" hidden>
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-close"></use></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-shell">
+      <div class="container help-layout">
+        <aside class="help-aside">
+          <p class="help-aside__title">تصنيفات المساعدة</p>
+          <nav class="help-cats" aria-label="تصنيفات المساعدة">
+            <button class="help-cat is-active" type="button" data-help-filter="all" aria-pressed="true">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-help"></use></svg>
+              <span>كل الأسئلة</span>
+              <span class="badge" data-help-count="all">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="getting-started" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sparkles"></use></svg>
+              <span>البدء السريع</span>
+              <span class="badge" data-help-count="getting-started">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="dedication" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-gift"></use></svg>
+              <span>الإهداء الشخصي</span>
+              <span class="badge" data-help-count="dedication">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="quran" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-quran"></use></svg>
+              <span>القرآن الكريم</span>
+              <span class="badge" data-help-count="quran">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="duas" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg>
+              <span>الأدعية</span>
+              <span class="badge" data-help-count="duas">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="adhkar" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sun"></use></svg>
+              <span>الأذكار</span>
+              <span class="badge" data-help-count="adhkar">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="tasbeeh" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-beads"></use></svg>
+              <span>المسبحة</span>
+              <span class="badge" data-help-count="tasbeeh">0</span>
+            </button>
+            <button class="help-cat" type="button" data-help-filter="privacy" aria-pressed="false">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg>
+              <span>الخصوصية والتقنية</span>
+              <span class="badge" data-help-count="privacy">0</span>
+            </button>
+          </nav>
+          <p class="help-aside__note">لا تحتاج إلى حساب. كل شيء يعمل في متصفحك، وما تحفظه يبقى على جهازك. <a href="about.html">اقرأ المنهجية</a>.</p>
+        </aside>
+
+        <div class="help-main">
+          <p class="help-status" data-help-status aria-live="polite">
+            <span>يعرض <strong data-help-visible>0</strong> سؤالًا من <strong data-help-total>0</strong>.</span>
+            <button class="help-status__reset" type="button" data-help-reset hidden>إعادة ضبط البحث</button>
+          </p>
+
+          <section class="help-section" id="help-getting-started" data-help-section="getting-started" aria-labelledby="help-getting-started-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sparkles"></use></svg></span>
+              <div>
+                <h2 id="help-getting-started-title">البدء السريع</h2>
+                <p>ما هذا الموقع، وكيف تبدأ في دقيقة.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>هل أحتاج إلى حساب أو تسجيل؟</summary>
+                <div class="help-faq__body"><p>لا. الموقع ثابت لا يحتوي على حسابات ولا قاعدة بيانات ولا خادم خلفي. تعمل كل الصفحات في متصفحك، وما تحفظه يبقى على جهازك عبر التخزين المحلي.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>كيف أبدأ استخدام الموقع؟</summary>
+                <div class="help-faq__body"><p>من الصفحة الرئيسية اختر بابًا: الأدعية، أو القرآن، أو الأذكار، أو المسبحة، أو الصدقة الجارية. ويمكنك الوصول إليها جميعًا من قائمة «أبواب الخير» في الترويسة. لإهداء العمل افتح «الإهداء الشخصي» أو اضغط زر «إهداء».</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>هل الموقع مجاني؟ وهل يعرض إعلانات أو يجمع تبرعات؟</summary>
+                <div class="help-faq__body"><p>الموقع مجاني بالكامل، بلا إعلانات ولا تتبّع ولا جمع تبرعات، ولا يوجد أي نظام دفع. هو مساحة للدعاء والذكر والمحتوى الموثّق فقط.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>كيف أثبّت الموقع على هاتفي أو حاسوبي؟</summary>
+                <div class="help-faq__body">
+                  <p>اضغط «تثبيت التطبيق» في تذييل الصفحة، أو استخدم خيار التثبيت في متصفحك:</p>
+                  <ul>
+                    <li><strong>Chrome على أندرويد:</strong> قائمة المتصفح ← «إضافة إلى الشاشة الرئيسية» أو «تثبيت التطبيق».</li>
+                    <li><strong>Safari على iOS:</strong> زر المشاركة ← «إضافة إلى الشاشة الرئيسية».</li>
+                    <li><strong>Chrome أو Edge على الحاسوب:</strong> أيقونة التثبيت في شريط العنوان، أو قائمة المتصفح ← «تثبيت».</li>
+                  </ul>
+                  <p>يظهر خيار التثبيت فقط عند فتح الموقع عبر HTTPS أو عبر خادم محلي.</p>
+                </div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>هل يعمل الموقع دون اتصال بالإنترنت؟</summary>
+                <div class="help-faq__body"><p>بعد أول زيارة ناجحة يخزّن عامل الخدمة هيكل الموقع والملفات الأساسية في المتصفح، فتعمل الصفحات المحفوظة دون اتصال. أما التلاوة الصوتية فتحتاج اتصالًا لأنها تُحمّل عند الطلب من شبكة خارجية، وتحديثات الموقع تحتاج اتصالًا أيضًا.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>كيف أغيّر الوضع الفاتح أو الداكن؟</summary>
+                <div class="help-faq__body"><p>اضغط زر الشمس/القمر في الترويسة. يُحفظ اختيارك في <code>tasbeeh.theme.v1</code>. إن لم تختر يدويًا، يتبع الموقع إعداد الوضع الداكن في جهازك تلقائيًا.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="getting-started">
+                <summary>كيف أشارك الموقع مع غيري؟</summary>
+                <div class="help-faq__body"><p>في الصفحة الرئيسية تجد أزرار «مشاركة الموقع»، و«واتساب»، و«رمز QR»، و«نسخ الرابط». تستخدم هذه الأزرار رابط الموقع المنشور فقط، ولا تنشئ روابط مشاركة من عنوان محلي.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-dedication" data-help-section="dedication" aria-labelledby="help-dedication-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-gift"></use></svg></span>
+              <div>
+                <h2 id="help-dedication-title">الإهداء الشخصي</h2>
+                <p>كيف تُهدي ثواب العمل، وتشارك الاسم بأمان.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>كيف أهدي العمل لشخص؟</summary>
+                <div class="help-faq__body"><p>من الصفحة الرئيسية اكتب الاسم في بطاقة الإهداء، واختر صفة القرابة، ثم اضغط «حفظ الإهداء». ويمكنك فتح نافذة الإهداء من زر «إهداء» في الترويسة أو من «تغيير الإهداء» في التذييل. يظهر الإهداء بعد الحفظ في التذييل وبطاقة الإهداء.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>أين يُحفظ الاسم؟ وهل يُرسل إلى خادم؟</summary>
+                <div class="help-faq__body"><p>يُحفظ الاسم وصفة القرابة في التخزين المحلي للمتصفح تحت <code>tasbeeh.personalization.v1</code>. لا يُرسل إلى أي خادم، ولا يراه أحد إلا إذا شاركت رابط الإهداء أو صورة البطاقة.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>كيف يعرف الزائر باسم من أُهدي العمل؟</summary>
+                <div class="help-faq__body">
+                  <p>عند الضغط على «نسخ رابط الإهداء» يُضاف الاسم وصفة القرابة إلى رابط الموقع على شكل معاملات، مثل:</p>
+                  <p><code>?name=فاطمة+زراري&amp;rel=grandmother</code></p>
+                  <p>من يفتح هذا الرابط يرى الاسم في الموقع، ويُحفظ الإهداء على جهازه أيضًا. صفة القرابة اختيارية، والاسم وحده يكفي.</p>
+                </div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>هل يمكن تغيير الإهداء أو إزالته؟</summary>
+                <div class="help-faq__body"><p>نعم. استخدم «تغيير الإهداء» لحفظ اسم جديد، أو «إزالة» لحذف الإهداء من هذا الجهاز. عند الإزالة يُحذف الاسم من رابط الصفحة الحالي أيضًا، لكن الروابط التي شاركتها سابقًا تبقى كما هي.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>كيف أنشئ بطاقة الإهداء أو أحفظها صورة PNG؟</summary>
+                <div class="help-faq__body"><p>افتح صفحة «الإهداء الشخصي» ثم «بطاقة الإهداء». تعرض البطاقة الاسم ودعاء الإهداء ورمز QR، وفيها زر لتحميل البطاقة صورة PNG. تُنشأ الصورة داخل المتصفح باستخدام Canvas، ولا تُرفع إلى أي خدمة.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>لماذا لا يتكرر لقب القرابة مثل «أمي أمي الغالية»؟</summary>
+                <div class="help-faq__body"><p>إذا بدأ الاسم بصفة القرابة نفسها، يتجنّب الموقع تكرارها تلقائيًا. الأفضل كتابة الاسم فقط، مثل «فاطمة»، واختيار «أمي» من القائمة، فيظهر «أمي فاطمة». وإذا كتبت «أمي الغالية» مع اختيار «أمي»، يبقى النص كما هو دون تكرار.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>هل يغيّر فتح رابط إهداء شخص آخر إهدائي؟</summary>
+                <div class="help-faq__body"><p>على هذا الجهاز، نعم: الموقع يقرأ الاسم وصفة القرابة من الرابط ويحفظهما محليًا، فيصبح الإهداء المعروض هو إهداء الرابط. لإرجاع إهدائك، احفظه من جديد أو أزل الإهداء الحالي.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="dedication">
+                <summary>هل يظهر اسمي لجميع الزوار دون مشاركة رابط؟</summary>
+                <div class="help-faq__body"><p>لا. الاسم المحفوظ محلي لا يظهر لزائر آخر. يظهر له فقط إذا فتح رابط إهداء يحمل الاسم، أو شاهد صورة البطاقة التي شاركتها.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-quran" data-help-section="quran" aria-labelledby="help-quran-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-quran"></use></svg></span>
+              <div>
+                <h2 id="help-quran-title">القرآن الكريم</h2>
+                <p>الآيات، المصدر، والتلاوة عند الطلب.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>هل يعرض الموقع المصحف كاملًا؟</summary>
+                <div class="help-faq__body"><p>لا. يعرض 27 آية مختارة في ستة موضوعات: المغفرة (5 آيات)، الرحمة (6)، النور والثبات (4)، النجاة من العذاب (4)، دخول الجنة (5)، الوالدين والأقارب (3). الاختيار للتدبّر والدعاء، وليس بديلًا عن المصحف أو التفسير.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>ما مصدر النص القرآني؟</summary>
+                <div class="help-faq__body"><p>النص بالرسم العثماني من مشروع Tanzil عبر Al Quran Cloud. التفاصيل الكاملة في صفحة <a href="about.html">المنهجية والمصادر</a>.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>كيف أستمع إلى التلاوة؟</summary>
+                <div class="help-faq__body"><p>اضغط زر «استماع» في بطاقة الآية. لا يُحمّل الصوت تلقائيًا؛ يُطلب الملف عند الضغط فقط من شبكة Islamic Network، بصوت الشيخ مشاري راشد العفاسي. يحتاج التشغيل إلى اتصال بالإنترنت.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>هل يمكنني نسخ الآية؟</summary>
+                <div class="help-faq__body"><p>نعم، زر النسخ ينسخ نص الآية مع مرجعها (اسم السورة ورقم الآية). راجع الرسم العثماني بعد اللصق إن كنت ستشارك النص.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>هل يقدّم الموقع تفسيرًا أو حكمًا شرعيًا؟</summary>
+                <div class="help-faq__body"><p>لا. اختيار الموضوعات اجتهادٌ للتدبّر، والموقع لا يقدّم تفسيرًا ولا فتوى. ارجع إلى المصحف وكتب التفسير وأهل العلم عند الحاجة.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="quran">
+                <summary>لماذا لا تعمل التلاوة دون اتصال؟</summary>
+                <div class="help-faq__body"><p>ملفات الصوت ليست ضمن التخزين المؤقت للعمل دون اتصال، لأنها تُحمّل من شبكة خارجية عند الطلب. النص المكتوب يبقى متاحًا في الصفحات المخزنة.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-duas" data-help-section="duas" aria-labelledby="help-duas-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-dua"></use></svg></span>
+              <div>
+                <h2 id="help-duas-title">الأدعية</h2>
+                <p>البحث، المفضلة، والمحرر المحلي.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>كم عدد الأدعية وتصنيفاتها؟</summary>
+                <div class="help-faq__body"><p>يحتوي الموقع على 18 دعاءً في سبعة تصنيفات: المغفرة، الرحمة، الثبات والنور، النجاة من العذاب، دخول الجنة، الوالدين والأقارب، وأدعية جامعة.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>كيف أبحث في الأدعية وأصفّيها؟</summary>
+                <div class="help-faq__body"><p>من صفحة الأدعية استخدم حقل البحث للبحث في العنوان والنص والوسم، واختر تصنيفًا من الأزرار، أو فعّل «المفضلة» لعرض ما حفظته فقط. زر «مسح الفلاتر» يعيد العرض الكامل.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>ما معنى وسم «دعاء عام»؟</summary>
+                <div class="help-faq__body"><p>يعني أن صيغة الدعاء عامة، وليست منسوبة لفظًا إلى النبي ﷺ. الأحاديث مبينة المصدر والمرجع والحكم، والأدعية القرآنية معروضة بالرسم العثماني. راجع <a href="about.html">المنهجية</a>.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>كيف أضيف دعاءً إلى المفضلة؟</summary>
+                <div class="help-faq__body"><p>اضغط زر القلب في بطاقة الدعاء. تُحفظ المفضلة في <code>tasbeeh.duas.favorites.v1</code> على جهازك، ويمكنك عرضها لاحقًا بزر «المفضلة».</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>ماذا ينسخ زر «نسخ مع المصدر»؟</summary>
+                <div class="help-faq__body"><p>ينسخ نص الدعاء مع اسم المصدر والمرجع، وليس النص وحده، حتى يبقى الدعاء مرتبطًا بأصله عند المشاركة.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>كيف أضيف دعاءً جديدًا أو أعدّل دعاءً؟</summary>
+                <div class="help-faq__body"><p>استخدم المحرر المحلي على الرابط <code>pages/editor.html</code>. المحرر متاح لكنه خارج قائمة التنقل الأساسية. التعديلات تُحفظ في متصفحك فقط ولا يراها الزوار.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>لماذا لا يظهر تعديلي للزوار؟</summary>
+                <div class="help-faq__body"><p>لأن المحرر يحفظ في التخزين المحلي تحت <code>tasbeeh.duas.overlay.v1</code>. لنشر التعديل: صدّر <code>duas.json</code>، واستبدل به <code>data/duas.json</code> في المشروع، ثم ارفع التغييرات وانشر الموقع.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="duas">
+                <summary>هل يمكن استيراد ملف duas.json؟</summary>
+                <div class="help-faq__body"><p>نعم. من المحرر اضغط «استيراد duas.json» واختر ملفًا صالحًا. يتحقق الموقع من البنية والمعرّفات والمصادر والتصنيفات، ثم يستبدل تعديلاتك المحلية الحالية. يجب أن تستخدم الملفات التصنيفات الأصلية نفسها، ولا يُرسل الملف إلى أي خادم.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-adhkar" data-help-section="adhkar" aria-labelledby="help-adhkar-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-sun"></use></svg></span>
+              <div>
+                <h2 id="help-adhkar-title">الأذكار</h2>
+                <p>ورد الصباح والمساء، العدّ، وحفظ التقدم.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>كم عدد الأذكار؟</summary>
+                <div class="help-faq__body"><p>21 ذكرًا: 10 لأذكار الصباح و11 لأذكار المساء، وكل ذكر مذكور مع مصدره ومرجعه وحكمه.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>كيف يعمل عدّ التكرارات؟</summary>
+                <div class="help-faq__body"><p>اضغط زر العدّ في بطاقة الذكر. يزداد العدّ حتى يبلغ العدد المطلوب، فيُعلَّم الذكر وتتحدث نسبة الإنجاز. يمكنك العودة لأي ذكر وإكماله.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>هل يُحفظ تقدم الورد؟ وهل يبدأ من جديد كل يوم؟</summary>
+                <div class="help-faq__body"><p>نعم، يُحفظ في <code>tasbeeh.adhkar.v1</code> على جهازك. التقدم مرتبط بتاريخ اليوم، فيبدأ تقدم جديد في يوم جديد تلقائيًا.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>كيف أعيد ضبط الورد؟</summary>
+                <div class="help-faq__body"><p>استخدم زر «إعادة ضبط الورد» في بطاقة التقدم، أو زر «إعادة الورد» الذي يظهر عند إكمال الورد. يبدأ العدّ من جديد لليوم الحالي.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>ما وقت أذكار الصباح والمساء؟</summary>
+                <div class="help-faq__body"><p>وقت الصباح من طلوع الفجر إلى الضحى، ووقت المساء من بعد العصر إلى المغرب، كما هو موضح في الصفحة. والمهم أن يكون الذكر حاضر القلب، لا مجرد عدّ.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="adhkar">
+                <summary>هل العدّ إلزامي؟</summary>
+                <div class="help-faq__body"><p>لا. العدّ أداة لمتابعة الورد فقط، ويمكنك الذكر دون استخدامه. لا يترتب على العدد حكم شرعي، والنصوص نفسها تحدد التكرار حيث ورد.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-tasbeeh" data-help-section="tasbeeh" aria-labelledby="help-tasbeeh-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-beads"></use></svg></span>
+              <div>
+                <h2 id="help-tasbeeh-title">المسبحة</h2>
+                <p>الأهداف، الذكر المخصص، وحفظ العدّ.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>ما الأذكار المتاحة في المسبحة؟</summary>
+                <div class="help-faq__body"><p>أربعة أذكار أساسية: سبحان الله، والحمد لله، والله أكبر، ولا إله إلا الله. ويمكنك إضافة ذكر مخصص من النموذج المخصص.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>كيف أختار هدف العدّ؟</summary>
+                <div class="help-faq__body"><p>لكل ذكر أهداف جاهزة: 33، و34، و99، و100، و1000. اضغط الهدف المطلوب أسفل العدّاد. ويمكن للذكر المخصص أن يأخذ هدفًا من 1 إلى 100000.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>هل يُحفظ العدّ تلقائيًا؟</summary>
+                <div class="help-faq__body"><p>نعم، يُحفظ العدّ الحالي والإجمالي والأهداف والذكر المختار وإعداد الاهتزاز في <code>tasbeeh.tasbeeh.v1</code> على جهازك.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>كيف أضيف ذكرًا مخصصًا؟</summary>
+                <div class="help-faq__body"><p>في بطاقة «ذكر مخصص» اكتب الذكر (حتى 80 حرفًا) وحدّد الهدف، ثم احفظ. يظهر الذكر ضمن قائمة الأذكار ويُحفظ على جهازك. استخدم ذكرًا مشروعًا ومعروفًا.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>ما وظيفة الاهتزاز؟ وكيف أطفئه؟</summary>
+                <div class="help-faq__body"><p>إذا كان جهازك يدعم Vibration API، يهتز عند كل عدّة. يمكنك تعطيله من مفتاح «الاهتزاز عند العدّ» في بطاقة العدّاد. لا يظهر تأثير على الأجهزة التي لا تدعمه.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="tasbeeh">
+                <summary>ماذا يفعل زر «إعادة الضبط»؟</summary>
+                <div class="help-faq__body"><p>يصفّر عدّ الجلسة الحالية للذكر المختار فقط، ويُبقي الإجمالي المحفوظ له. لا يحذف بقية الأذكار ولا الإعدادات.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <section class="help-section" id="help-privacy" data-help-section="privacy" aria-labelledby="help-privacy-title">
+            <div class="help-section__head">
+              <span class="help-section__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg></span>
+              <div>
+                <h2 id="help-privacy-title">الخصوصية والتقنية</h2>
+                <p>ما يُحفظ، وما لا يُرسل، وكيف يعمل الموقع.</p>
+              </div>
+            </div>
+            <div class="help-faqs">
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>ما البيانات التي يحفظها الموقع على جهازي؟</summary>
+                <div class="help-faq__body">
+                  <p>يحفظ الموقع مفاتيح محلية محدودة، وكلها تخص تجربتك:</p>
+                  <ul>
+                    <li><code>tasbeeh.theme.v1</code> — الوضع الفاتح أو الداكن.</li>
+                    <li><code>tasbeeh.personalization.v1</code> — الاسم وصفة القرابة.</li>
+                    <li><code>tasbeeh.publicUrl.v1</code> — رابط نشر مخصص إن أدخلته في إعدادات المشاركة.</li>
+                    <li><code>tasbeeh.duas.overlay.v1</code> — تعديلات المحرر المحلي.</li>
+                    <li><code>tasbeeh.duas.favorites.v1</code> — الأدعية المفضلة.</li>
+                    <li><code>tasbeeh.tasbeeh.v1</code> — عدّ المسبحة وإعداداتها.</li>
+                    <li><code>tasbeeh.adhkar.v1</code> — تقدم أذكار اليوم.</li>
+                    <li><code>tasbeeh.install.dismissed.v1</code> — تفضيل إخفاء دعوة التثبيت.</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>هل تستخدمون ملفات تعريف ارتباط أو تحليلات؟</summary>
+                <div class="help-faq__body"><p>لا يضع الموقع ملفات تعريف ارتباط، ولا يستخدم أدوات تحليلات أو تتبّعًا إعلانيًا. الاستضافة عبر GitHub Pages قد تسجّل بيانات تقنية أساسية وفق سياسة GitHub، لكن الموقع نفسه لا يجمع بيانات ولا يرسلها إلى خادم خاص به.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>كيف أحذف بياناتي المحلية؟</summary>
+                <div class="help-faq__body"><p>يمكنك إزالة الإهداء من زر «إزالة»، وحذف تعديلات المحرر من «منطقة الخطر»، وإعادة ضبط الأذكار والمسبحة من أزرارها. ولحذف كل شيء دفعة واحدة، امسح بيانات الموقع من إعدادات المتصفح (Site data / Clear site data).</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>هل يعمل الموقع عند فتح index.html مباشرة من الملفات؟</summary>
+                <div class="help-faq__body"><p>لا بشكل كامل. فتح الملف عبر <code>file://</code> يمنع تحميل ملفات JSON وعامل الخدمة في معظم المتصفحات. استخدم الموقع المنشور، أو شغّل خادمًا محليًا بسيطًا أثناء التطوير.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>كيف تُحدّث نسخة الموقع المخزنة دون اتصال؟</summary>
+                <div class="help-faq__body"><p>عامل الخدمة يحمل رقم إصدار ثابتًا في <code>sw.js</code>، وعند نشر إصدار جديد يتحدث التخزين المؤقت. إذا بقيت نسخة قديمة، أعد تحميل الصفحة بقوة (Ctrl+F5 أو Command+Shift+R) أو امسح بيانات الموقع ثم افتحه من جديد.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>أين تُولّد رموز QR والصور؟</summary>
+                <div class="help-faq__body"><p>تُولّد رموز QR محليًا باستخدام مكتبة محزومة داخل الموقع، وتُولّد بطاقة PNG باستخدام Canvas في المتصفح. لا تُرفع الصور أو الأسماء إلى أي خدمة خارجية.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>هل الروابط الخارجية آمنة؟</summary>
+                <div class="help-faq__body"><p>روابط المصادر والتواصل تفتح في تبويب جديد مع <code>rel="noopener noreferrer"</code>. المحتوى الخارجي (مثل التلاوة أو صفحات المصادر) تابع لجهاته، والموقع لا يتحكم فيه.</p></div>
+              </details>
+              <details class="help-faq" data-help-item data-help-category="privacy">
+                <summary>ما المتصفحات المدعومة؟</summary>
+                <div class="help-faq__body"><p>يعمل الموقع على الإصدارات الحديثة من Chrome وEdge وFirefox وSafari. تختلف خيارات التثبيت والاهتزاز والحافظة بين المتصفحات؛ وتحتاج وظائف Clipboard إلى HTTPS أو localhost.</p></div>
+              </details>
+            </div>
+          </section>
+
+          <div class="help-empty" data-help-empty hidden>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-search"></use></svg>
+            <h2>لا توجد إجابة مطابقة</h2>
+            <p>جرّب كلمة أقصر، أو اختر تصنيفًا آخر، أو امسح البحث لعرض كل الأسئلة.</p>
+            <div class="help-empty__actions">
+              <button class="btn btn--primary" type="button" data-help-reset>عرض كل الأسئلة</button>
+              <a class="btn btn--outline" href="about.html">المنهجية والمصادر</a>
+            </div>
+          </div>
+
+          <div class="help-cta">
+            <div>
+              <h2>لم تجد إجابتك؟</h2>
+              <p>أرسل ملاحظة أو تصحيحًا عبر صفحة المشروع على GitHub، أو راجع مصادر المحتوى.</p>
+            </div>
+            <div class="help-cta__actions">
+              <a class="btn btn--outline" href="https://github.com/abdelmouniemeessay/tasbeeh-sadaqa-jariya/issues" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-github"></use></svg>
+                صفحة المشروع
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-external"></use></svg>
+              </a>
+              <a class="btn btn--primary" href="about.html">المصادر والمنهجية</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="../index.html" aria-label="تسبيح — الصفحة الرئيسية">
+            <span class="brand__mark"><svg class="icon icon--fill" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-star"></use></svg></span>
+            <span class="brand__text"><strong>تسبيح</strong><small>صدقة جارية</small></span>
+          </a>
+          <p>مساحة هادئة للدعاء والذكر والصدقة. لا حسابات، ولا تتبّع، ولا جمع تبرعات. فقط محتوى موثّق، وإهداءٌ صادق.</p>
+        </div>
+        <nav class="footer__nav" aria-label="استكشف الموقع">
+          <h2>استكشف</h2>
+          <a href="../index.html">الرئيسية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/sadaqa.html">الإهداء الشخصي <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/help.html">مركز المساعدة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/about.html">المصادر والمنهجية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/editor.html">المحرر المحلي <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+        </nav>
+        <nav class="footer__nav" aria-label="أبواب الخير">
+          <h2>أبواب الخير</h2>
+          <a href="../pages/quran.html">القرآن الكريم <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/duas.html">الأدعية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/adhkar.html">الأذكار <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/tasbeeh.html">المسبحة <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+          <a href="../pages/charity.html">الصدقة الجارية <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-arrow-left"></use></svg></a>
+        </nav>
+        <div class="footer__dedication">
+          <p class="eyebrow">إهداء</p>
+          <p data-dedication="full">اللهم اجعل هذا العمل صدقة جارية عن موتى المسلمين، واغفر لمن أُهدي إليه، وارحم موتى المسلمين.</p>
+          <button class="btn btn--outline btn--sm" type="button" data-open-personalize>تغيير الإهداء</button>
+        </div>
+      </div>
+
+      <section class="developer-card" aria-labelledby="developer-title">
+        <div class="developer-card__intro">
+          <p class="eyebrow">عن المطور</p>
+          <h2 id="developer-title">تواصل مع صاحب الموقع</h2>
+          <p>صُمم هذا الموقع ورُوجع محتواه بعناية ليكون خفيفًا وواضحًا. إن كانت لديك ملاحظة أو تصحيح، تواصل عبر إحدى القنوات التالية.</p>
+        </div>
+        <div class="developer-card__identity">
+          <span class="developer-card__avatar" aria-hidden="true">ع</span>
+          <div>
+            <strong>Abdelmounieme Essayd</strong>
+            <span>عبد المنعم إسعيد</span>
+            <small>مطوّر واجهات أمامية</small>
+          </div>
+        </div>
+        <div class="developer-card__links">
+          <a class="social-link" href="https://github.com/essayd" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-github"></use></svg> GitHub
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/abd-el-mouneime-essayd-589a63304" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-linkedin"></use></svg> LinkedIn
+          </a>
+          <a class="social-link" href="https://www.facebook.com/share/1FzVx9LVn7/" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-facebook"></use></svg> Facebook
+          </a>
+          <a class="social-link" href="https://www.instagram.com/ess._.moun3im" target="_blank" rel="noopener noreferrer" aria-label="Instagram — Abdelmounieme Essayd">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-instagram"></use></svg> Instagram
+          </a>
+        </div>
+      </section>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> تسبيح — صدقة جارية.</p>
+        <p class="footer__note"><svg class="icon" aria-hidden="true" focusable="false"><use href="../assets/icons.svg#i-shield"></use></svg> المحتوى موثّق من مصادره. <a href="../pages/about.html">المنهجية</a></p>
+        <p><button class="btn btn--ghost btn--sm" type="button" data-install-app>تثبيت التطبيق</button></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js" defer></script>
+  <script src="../assets/js/share.js" defer></script>
+  <script src="../assets/js/help.js" defer></script>
+</body>
+</html>

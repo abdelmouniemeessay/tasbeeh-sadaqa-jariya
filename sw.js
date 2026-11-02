@@ -4,7 +4,7 @@
    ========================================================= */
 "use strict";
 
-const VERSION = "1.0.0";
+const VERSION = "2.0.0";
 const CACHE_NAME = "tasbeeh-static-v" + VERSION;
 
 const PRECACHE = [
@@ -20,6 +20,7 @@ const PRECACHE = [
   "./pages/adhkar.html",
   "./pages/charity.html",
   "./pages/sadaqa.html",
+  "./pages/help.html",
   "./pages/editor.html",
   "./pages/about.html",
 
@@ -28,6 +29,7 @@ const PRECACHE = [
   "./assets/css/pages.css",
   "./assets/css/tools.css",
   "./assets/css/responsive.css",
+  "./assets/css/v2.css",
 
   "./assets/js/app.js",
   "./assets/js/share.js",
@@ -38,6 +40,7 @@ const PRECACHE = [
   "./assets/js/adhkar.js",
   "./assets/js/charity.js",
   "./assets/js/sadaqa.js",
+  "./assets/js/help.js",
   "./assets/js/editor.js",
   "./assets/js/vendor/qrcode.js",
 

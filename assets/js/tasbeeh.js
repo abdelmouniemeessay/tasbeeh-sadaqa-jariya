@@ -220,7 +220,7 @@
       const source = T.escapeHTML(virtue.source || "");
       const reference = virtue.reference ? " — " + T.escapeHTML(virtue.reference) : "";
       const link = url
-        ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener">' + source + reference + " " + T.icon("external") + "</a>"
+        ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener noreferrer">' + source + reference + " " + T.icon("external") + "</a>"
         : "<span>" + source + reference + "</span>";
       return (
         '<article class="virtue-card">' +

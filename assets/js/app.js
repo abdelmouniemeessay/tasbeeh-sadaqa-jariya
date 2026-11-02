@@ -241,7 +241,7 @@
       if (use) use.setAttribute("href", root + "assets/icons.svg#i-" + (dark ? "sun" : "moon"));
     });
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", dark ? "#071a14" : "#0b3b2e");
+    if (meta) meta.setAttribute("content", dark ? "#0b1914" : "#183d32");
   }
 
   function applyTheme(theme, persist) {
@@ -269,12 +269,22 @@
   }
 
   /* ---------- Navigation ---------- */
+  function closeNavGroups(except) {
+    $$("[data-nav-group]").forEach(function (group) {
+      if (group === except) return;
+      group.classList.remove("is-open");
+      const toggle = group.querySelector("[data-nav-group-toggle]");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
   function closeNav() {
     const nav = $("#site-nav");
     const toggle = $("[data-nav-toggle]");
     if (!nav) return;
     nav.classList.remove("is-open");
     doc.body.classList.remove("nav-open");
+    closeNavGroups();
     if (toggle) {
       toggle.setAttribute("aria-expanded", "false");
       const use = toggle.querySelector("use");
@@ -299,6 +309,19 @@
     const nav = $("#site-nav");
     const toggle = $("[data-nav-toggle]");
     if (!nav || !toggle) return;
+
+    $$("[data-nav-group]", nav).forEach(function (group) {
+      const groupToggle = group.querySelector("[data-nav-group-toggle]");
+      if (!groupToggle) return;
+      groupToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const willOpen = !group.classList.contains("is-open");
+        closeNavGroups(group);
+        group.classList.toggle("is-open", willOpen);
+        groupToggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      });
+    });
+
     toggle.addEventListener("click", function () {
       if (nav.classList.contains("is-open")) closeNav();
       else openNav();
@@ -306,16 +329,24 @@
     $$("a", nav).forEach(function (link) {
       link.addEventListener("click", closeNav);
     });
+    $$("[data-nav-close]", nav).forEach(function (button) {
+      button.addEventListener("click", closeNav);
+    });
     doc.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closeNav();
+      if (event.key !== "Escape") return;
+      const openGroup = $("[data-nav-group].is-open");
+      const groupToggle = openGroup ? openGroup.querySelector("[data-nav-group-toggle]") : null;
+      closeNav();
+      if (groupToggle) groupToggle.focus();
     });
     doc.addEventListener("click", function (event) {
+      if (!event.target.closest("[data-nav-group]")) closeNavGroups();
       if (!nav.classList.contains("is-open")) return;
       if (event.target.closest("#site-nav") || event.target.closest("[data-nav-toggle]")) return;
       closeNav();
     });
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 1060) closeNav();
+      if (window.innerWidth > 1120) closeNav();
     });
   }
 
@@ -324,6 +355,12 @@
     $$("#site-nav a").forEach(function (link) {
       if (page && link.dataset.nav === page) link.setAttribute("aria-current", "page");
       else link.removeAttribute("aria-current");
+    });
+    $$("[data-nav-group]").forEach(function (group) {
+      const active = group.querySelector('a[aria-current="page"]');
+      group.classList.toggle("is-active", !!active);
+      const groupToggle = group.querySelector("[data-nav-group-toggle]");
+      if (groupToggle) groupToggle.classList.toggle("is-active", !!active);
     });
   }
 

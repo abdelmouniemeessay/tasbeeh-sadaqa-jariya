@@ -34,7 +34,7 @@
     const source = T.escapeHTML(dua.source || "مصدر غير محدد");
     const reference = dua.reference ? " — " + T.escapeHTML(dua.reference) : "";
     const link = url
-      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener">' + source + reference + " " + T.icon("external") + "</a>"
+      ? '<a href="' + T.escapeHTML(url) + '" target="_blank" rel="noopener noreferrer">' + source + reference + " " + T.icon("external") + "</a>"
       : "<span>" + source + reference + "</span>";
     const grade = dua.grade ? '<span class="badge badge--grade">' + T.escapeHTML(dua.grade) + "</span>" : "";
     return link + grade;

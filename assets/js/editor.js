@@ -25,6 +25,8 @@
   const resetButton = T.$("[data-editor-reset]");
   const categorySelect = T.$("#editor-category");
   const typeSelect = T.$("#editor-type");
+  const importInput = T.$("[data-editor-import-input]");
+  const importButtons = T.$$("[data-editor-import]");
 
   let base = null;
   let merged = null;
@@ -366,6 +368,126 @@
     T.toast("تم تصدير duas.json. استبدل به ملف data/duas.json ثم انشر الموقع.", "success");
   }
 
+  function readImportFile(file) {
+    if (typeof file.text === "function") return file.text();
+    return new Promise(function (resolve, reject) {
+      const reader = new FileReader();
+      reader.onload = function () { resolve(String(reader.result || "")); };
+      reader.onerror = function () { reject(new Error("تعذّر قراءة الملف.")); };
+      reader.readAsText(file, "utf-8");
+    });
+  }
+
+  function parseImport(raw) {
+    let data;
+    try {
+      data = JSON.parse(raw);
+    } catch (error) {
+      throw new Error("الملف ليس JSON صالحًا. تأكد من اختيار ملف duas.json المُصدَّر من الموقع.");
+    }
+    if (!data || typeof data !== "object" || !Array.isArray(data.duas)) {
+      throw new Error("بنية الملف غير صحيحة: يجب أن يحتوي على مصفوفة duas.");
+    }
+    if (data.categories !== undefined && !Array.isArray(data.categories)) {
+      throw new Error("بنية التصنيفات غير صحيحة: يجب أن تكون categories مصفوفة.");
+    }
+
+    const knownCategories = new Set(base.categories.map(function (category) { return category.id; }));
+    if (Array.isArray(data.categories)) {
+      data.categories.forEach(function (category, index) {
+        if (!category || typeof category !== "object" || !category.id || !knownCategories.has(category.id)) {
+          throw new Error("التصنيف رقم " + (index + 1) + " غير معروف في الموقع. استخدم التصنيفات الأصلية فقط.");
+        }
+      });
+    }
+
+    const seen = new Set();
+    return data.duas.map(function (entry, index) {
+      if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
+        throw new Error("العنصر رقم " + (index + 1) + " ليس دعاءً صالحًا.");
+      }
+      const id = T.sanitizeText(entry.id, 80);
+      if (!id) throw new Error("الدعاء رقم " + (index + 1) + " بلا معرّف id.");
+      if (seen.has(id)) throw new Error("المعرّف «" + id + "» مكرر داخل الملف.");
+      seen.add(id);
+
+      const clean = T.sanitizeDua(entry, id);
+      if (!clean.title) throw new Error("الدعاء «" + id + "» بلا عنوان.");
+      if (!clean.text) throw new Error("الدعاء «" + id + "» بلا نص.");
+      if (!clean.source) throw new Error("الدعاء «" + id + "» بلا مصدر.");
+      if (clean.type === "hadith" && !clean.grade) {
+        throw new Error("الدعاء «" + id + "» حديث بلا حكم. أضف الحكم قبل الاستيراد.");
+      }
+      if (clean.type === "quran" && !clean.reference) {
+        throw new Error("الدعاء «" + id + "» قرآني بلا مرجع للسورة والآية.");
+      }
+      if (!knownCategories.has(clean.category)) {
+        throw new Error("تصنيف الدعاء «" + id + "» غير معروف: " + clean.category);
+      }
+      return clean;
+    });
+  }
+
+  function buildImportOverlay(duas) {
+    const overlay = T.emptyOverlay();
+    const importedIds = new Set();
+    const baseById = new Map();
+
+    base.duas.forEach(function (dua) {
+      if (!dua || !dua.id) return;
+      baseById.set(dua.id, T.sanitizeDua(dua, dua.id));
+    });
+
+    duas.forEach(function (dua) {
+      importedIds.add(dua.id);
+      const existing = baseById.get(dua.id);
+      if (!existing) {
+        overlay.added.push(dua);
+        return;
+      }
+      if (JSON.stringify(existing) !== JSON.stringify(dua)) {
+        const patch = Object.assign({}, dua);
+        delete patch.id;
+        overlay.edited[dua.id] = patch;
+      }
+    });
+
+    baseById.forEach(function (value, id) {
+      if (!importedIds.has(id)) overlay.deleted.push(id);
+    });
+
+    return overlay;
+  }
+
+  async function importDuas(file) {
+    if (!base || !file) return;
+    try {
+      const raw = await readImportFile(file);
+      const imported = parseImport(raw);
+      const overlay = buildImportOverlay(imported);
+      const changes = overlay.added.length + Object.keys(overlay.edited).length + overlay.deleted.length;
+      const confirmed = await T.confirm(
+        "سيستبدل هذا الملف كل تعديلاتك المحلية الحالية. يحتوي الملف على " +
+          T.formatNumber(imported.length) + " دعاء، وسيُطبَّق " + T.formatNumber(changes) +
+          " تغييرًا مقارنة بنسخة الموقع المنشورة. يمكنك حذف التعديلات لاحقًا من منطقة الخطر.",
+        { title: "استيراد duas.json", confirmLabel: "استيراد", danger: false }
+      );
+      if (!confirmed) return;
+      if (!T.saveOverlay(overlay)) {
+        throw new Error("تعذّر حفظ الاستيراد. تحقق من مساحة التخزين في المتصفح.");
+      }
+      T.invalidateDuas();
+      currentId = null;
+      refresh();
+      resetForm();
+      T.toast("تم استيراد الملف محليًا. راجع الأدعية ثم صدّرها وانشرها عند الحاجة.", "success");
+    } catch (error) {
+      T.toast(error && error.message ? error.message : "تعذّر استيراد الملف.", "error");
+    } finally {
+      if (importInput) importInput.value = "";
+    }
+  }
+
   function refresh(preferredId) {
     if (!base) return;
     merged = T.applyOverlay(base);
@@ -414,6 +536,16 @@
   T.$$("[data-editor-export]").forEach(function (button) {
     button.addEventListener("click", exportDuas);
   });
+
+  if (importButtons.length && importInput) {
+    importButtons.forEach(function (button) {
+      button.addEventListener("click", function () { importInput.click(); });
+    });
+    importInput.addEventListener("change", function () {
+      const file = importInput.files && importInput.files[0];
+      if (file) importDuas(file);
+    });
+  }
 
   if (searchInput) {
     searchInput.addEventListener("input", T.debounce(renderList, 100));
